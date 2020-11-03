@@ -47,17 +47,15 @@
       onclick="document.body.classList.toggle('files')"
       >Browse files</button>
   </nav>
-  <iframe id="ce" src="" class="hide"></iframe>
-  <iframe id="main" src=""></iframe>
+  <iframe id="ce" src="about:blank"></iframe>
+  <iframe id="main" src="about:blank"></iframe>
   <script>
   async function setup () {
     const main = document.querySelector('iframe#main')
-    if (location.pathname.endsWith('.html')) {
-      const html = await beaker.hyperdrive.readFile(location.pathname).catch(e => `<h1>404 not found<h1>`)
-      main.contentDocument.write(html)
-      const ce = document.querySelector('iframe#ce')
-      ce.src = 'http://localhost:6805/ce/cloud-explorer/cloud-explorer.html?currentDrive=' + window.location.hostname
-    }
+    const html = await beaker.hyperdrive.readFile(location.pathname + (window.location.pathname.endsWith('/') ? '/index.html' : '')).catch(e => `<h1>404 not found<h1>`)
+    main.contentDocument.write(html)
+    const ce = document.querySelector('iframe#ce')
+    ce.src = 'http://localhost:6805/ce/cloud-explorer/cloud-explorer.html?currentDrive=' + window.location.hostname
   }
   setup()
   </script>
