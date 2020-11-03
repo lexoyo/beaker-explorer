@@ -55,7 +55,8 @@
     const html = await beaker.hyperdrive.readFile(location.pathname + (window.location.pathname.endsWith('/') ? '/index.html' : '')).catch(e => `<h1>404 not found<h1>`)
     main.contentDocument.write(html)
     const ce = document.querySelector('iframe#ce')
-    ce.src = 'https://demo.cloud-explorer.org/ce/cloud-explorer/cloud-explorer.html?currentDrive=' + window.location.hostname
+    ce.src = 'http://localhost:6805/ce/cloud-explorer/cloud-explorer.html?currentDrive=' + window.location.hostname
+    // ce.src = 'https://demo.cloud-explorer.org/ce/cloud-explorer/cloud-explorer.html?currentDrive=' + window.location.hostname
   }
   setup()
   </script>

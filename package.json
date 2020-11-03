@@ -1,0 +1,23 @@
+{
+  "name": "beaker-explorer",
+  "version": "1.0.0",
+  "description": "This is the first step to make [Silex website builder](https://www.silex.me) edit and publish P2P websites with [Beaker browser](https://beakerbrowser.com/)",
+  "main": "index.js",
+  "dependencies": {
+    "cloud-explorer": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexoyo/beaker-explorer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexoyo/beaker-explorer/issues"
+  },
+  "homepage": "https://github.com/lexoyo/beaker-explorer#readme"
+}

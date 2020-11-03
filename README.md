@@ -17,8 +17,12 @@ Test this online:
 
 
 Or test this as a [Beaker ui front end](https://docs.beakerbrowser.com/developers/frontends-.ui-folder/):
+
 * Clone this repo somewhere on you computer
+* Run `npm install` and `npm start`
 * Create a new drive from the `ui/` folder of the cloned repo
 * Mount this new drive with the name `.ui` in one of your drives
-* Display your drive, there will be a "Browse files" button, click it to see the files in CloudExplorer
+* Display your drive, there will be a "Browse files" button, click it to see your files in CloudExplorer
+
+In this second test, CloudExplorer will browse the files of your open drive instead of letting you choose
 
